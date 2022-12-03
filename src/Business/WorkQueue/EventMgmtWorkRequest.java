@@ -4,10 +4,29 @@
  */
 package Business.WorkQueue;
 
+import Business.Utility.Event;
+
 /**
  *
  * @author mansi
  */
-public class EventMgmtWorkRequest {
+public class EventMgmtWorkRequest  extends WorkRequest{
+    
+    private Event events;
+
+    public Event getEvents() {
+        return events;
+    }
+
+    public void setEvents(Event events) {
+        this.events = events;
+    }
+
+    @Override
+    public String toString() {
+        return events.getEventName();
+    }
+    
+    
     
 }

@@ -4,10 +4,29 @@
  */
 package Business.WorkQueue;
 
+import Business.Customer.Product;
+
 /**
  *
  * @author mansi
  */
-public class DeliverWorkRequest {
+public class DeliverWorkRequest extends WorkRequest {
     
-}
+    private String Status;
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+//
+//    public Product getProduct() {
+//        return product;
+//    }
+//
+//    public void setProduct(Product product) {
+//        this.product = product;
+//    }
+    
