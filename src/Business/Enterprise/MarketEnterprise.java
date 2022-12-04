@@ -1,13 +1,30 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.Enterprise;
+
+import Business.Role.MarketEnterpriseRole;
+import Business.Role.Role;
+import Business.Role.SecurityEnterpriseRole;
+import java.util.ArrayList;
 
 /**
  *
  * @author ramvaghani
  */
-public class MarketEnterprise {
+public class MarketEnterprise extends Enterprise{
+    
+    public MarketEnterprise(String name,Enterprise.EnterpriseType type) {
+        super(name,type.Market);
+    }
+    
+@Override
+public ArrayList<Role> getSupportedRole() {
+    ArrayList<Role> roles = new ArrayList<>();
+    roles.add(new MarketEnterpriseRole());
+    return roles; //To change body of generated methods, choose Tools | Templates.
+}
     
 }
