@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.Employee;
 
@@ -8,6 +9,34 @@ package Business.Employee;
  *
  * @author ramvaghani
  */
-public class SecurityEmployee {
+public class SecurityEmployee extends Employee{
+    
+    private String streetName;
+    private String timeSlot;
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public String getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(String timeSlot) {
+        this.timeSlot = timeSlot;
+    }
+
+    @Override
+    public String toString() {
+        return super.getName()+": "+ streetName ;
+    }
+    
+    
+    
+    
     
 }
