@@ -8,6 +8,18 @@ package Business.WorkQueue;
  *
  * @author mansi
  */
-public class MaintenanceRequest {
+public class MaintenanceRequest extends WorkRequest{
+    private double reqCharges;
+
+    public double getReqCharges() {
+        return reqCharges;
+    }
+
+    public void setReqCharges(double reqCharges) {
+        this.reqCharges = reqCharges;
+    }
+    
+    
     
 }
+
