@@ -4,10 +4,26 @@
  */
 package Business.WorkQueue;
 
+mport java.util.ArrayList;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author mansi
  */
 public class WorkQueue {
+    
+    private ArrayList<WorkRequest> reqList;
+    
+    public WorkQueue(){
+        reqList= new ArrayList<>();
+    }
+
+    public ArrayList<WorkRequest> getReqList() {
+        return reqList;
+    }
+    
+    
     
 }
