@@ -21,12 +21,12 @@ public class DeliverWorkRequest extends WorkRequest {
     public void setStatus(String Status) {
         this.Status = Status;
     }
-//
-//    public Product getProduct() {
-//        return product;
-//    }
-//
-//    public void setProduct(Product product) {
-//        this.product = product;
-//    }
+
+   public Product getProduct() {
+       return product;
+    }
+
+    public void setProduct(Product product) {
+       this.product = product;
+}
     

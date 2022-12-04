@@ -111,11 +111,7 @@ public class WorkRequest {
         this.groceryProduct = groceryProduct;
     }
     
-    @Override
-    public String toString() {
-        String date1= requestDate.toString();
-        return date1;
-    }
+    
     
 
     

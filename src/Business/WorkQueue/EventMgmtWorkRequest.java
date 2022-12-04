@@ -18,9 +18,7 @@ public class EventMgmtWorkRequest  extends WorkRequest{
         return events;
     }
 
-    public void setEvents(Event events) {
-        this.events = events;
-    }
+   
 
     @Override
     public String toString() {
