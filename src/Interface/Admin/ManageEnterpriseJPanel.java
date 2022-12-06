@@ -8,12 +8,12 @@ package Interface.Admin;
  *
  * @author ramvaghani
  */
-public class AdminWorkAreaJPanel extends javax.swing.JPanel {
+public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AdminWorkAreaJpanel
+     * Creates new form ManageEnterpriseJPanel
      */
-    public AdminWorkAreaJPanel() {
+    public ManageEnterpriseJPanel() {
         initComponents();
     }
 
