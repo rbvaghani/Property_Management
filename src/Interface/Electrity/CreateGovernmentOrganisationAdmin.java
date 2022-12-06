@@ -266,21 +266,164 @@ public class CreateGovernmentOrganisationAdminJPanel extends javax.swing.JPanel 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        OrganizationJTable = new javax.swing.JTable();
+        RoleComboBox = new javax.swing.JComboBox();
+        jLabel5 = new javax.swing.JLabel();
+        nameTXT = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        OrganisationComboBox = new javax.swing.JComboBox();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        usernameJTextField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        passwordJPasswordField = new javax.swing.JPasswordField();
+        submitJButton = new javax.swing.JButton();
+        backJButton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Manage Organisations Admin");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 11, -1, -1));
+
+        OrganizationJTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "UserName", "Role", "Password"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(OrganizationJTable);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 64, 523, 95));
+
+        RoleComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RoleComboBoxActionPerformed(evt);
+            }
+        });
+        jPanel1.add(RoleComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 321, 185, -1));
+
+        jLabel5.setText("Name:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 272, -1, 31));
+        jPanel1.add(nameTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 277, 185, -1));
+
+        jLabel1.setText("Organisation:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 177, -1, -1));
+
+        OrganisationComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        OrganisationComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrganisationComboBoxActionPerformed(evt);
+            }
+        });
+        jPanel1.add(OrganisationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 179, 185, -1));
+
+        jLabel2.setText("Username");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 209, -1, -1));
+
+        jLabel7.setText("Role");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 321, -1, -1));
+        jPanel1.add(usernameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 210, 185, -1));
+
+        jLabel4.setText("Password");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 241, -1, 20));
+        jPanel1.add(passwordJPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 241, 185, -1));
+
+        submitJButton.setText("Submit");
+        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitJButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 359, 185, -1));
+
+        backJButton.setText("<< Back");
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 359, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 988, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 988, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 587, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RoleComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoleComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RoleComboBoxActionPerformed
+
+    private void OrganisationComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrganisationComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OrganisationComboBoxActionPerformed
+
+    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+
+        Role role=  (Role) RoleComboBox.getSelectedItem();
+        Organisation o = (Organisation) OrganisationComboBox.getSelectedItem();
+        String username = usernameJTextField.getText();
+        String password = String.valueOf(passwordJPasswordField.getPassword());
+        String name = nameTXT.getText();
+
+        Employee employee = o.getEmpList().createEmployee(name,role);
+        //employee.setRole(role);
+        UserAccount ua = new UserAccount();
+        ua.setEmployee(employee);
+        ua.setPassword(password);
+        ua.setRole(role);
+        ua.setUserName(username);
+        o.getUserAccountDir().addUserAccount(ua);
+        employee.setEmpUserAcc(ua);
+        JOptionPane.showMessageDialog(null, "Added Successfully..!!");
+
+        populateTable();
+    }//GEN-LAST:event_submitJButtonActionPerformed
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        //SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+        //sysAdminwjp.populateTree();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_backJButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -316,5 +459,21 @@ public class CreateGovernmentOrganisationAdminJPanel extends javax.swing.JPanel 
             
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox OrganisationComboBox;
+    private javax.swing.JTable OrganizationJTable;
+    private javax.swing.JComboBox RoleComboBox;
+    private javax.swing.JButton backJButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField nameTXT;
+    private javax.swing.JPasswordField passwordJPasswordField;
+    private javax.swing.JButton submitJButton;
+    private javax.swing.JTextField usernameJTextField;
     // End of variables declaration//GEN-END:variables
 }
