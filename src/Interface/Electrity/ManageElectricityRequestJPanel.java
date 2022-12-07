@@ -113,7 +113,7 @@ public class ManageElectricityRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable receReqJTbl;
     // End of variables declaration                   
-}
+} 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
