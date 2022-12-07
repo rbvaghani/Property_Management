@@ -50,12 +50,7 @@ public class ManageGovernmentOrganizationJPanel extends javax.swing.JPanel {
      */
     @SuppressWarnings("unchecked")
     
-    private void manageOrganisationButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                         
-        // TODO add your handling code here:
-        Interface.Electricity.CreateGovernmentOrgJPanel imcmojp = new Interface.Electricity.CreateGovernmentOrgJPanel(userProcessContainer,enterprise);
-        userProcessContainer.add("CreateGovernmentOrgJPanel",imcmojp);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+   
     }                                                        
 
     private void manageAdminsButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                   
