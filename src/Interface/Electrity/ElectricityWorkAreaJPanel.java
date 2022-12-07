@@ -30,7 +30,7 @@ public class ElectricityWorkAreaJPanel extends javax.swing.JPanel {
     UserAccount userAccount;
     Organisation organisation;
     Ecosystem business;
-    UserAccount account;
+    //UserAccount account;
    
     public ElectricityWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount account, Organisation organization, Ecosystem business) {
         initComponents();
