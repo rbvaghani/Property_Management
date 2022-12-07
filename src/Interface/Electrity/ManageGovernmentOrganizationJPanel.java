@@ -3,6 +3,32 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Interface.Electrity;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Organisation.Organisation;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
+/**
+ *
+ * @author Himani Solanki
+ */
+public class ManageGovernmentOrganizationJPanel extends javax.swing.JPanel {
+
+    /**
+     * Creates new form ManageGovernmentOrganizationJPanel
+     */
+    JPanel userProcessContainer;
+    Enterprise enterprise;
+
+    
+
+    public ManageGovernmentOrganizationJPanel(JPanel userProcessContainer, UserAccount account, Organisation organization, Enterprise enterprise, Ecosystem business) {
+       initComponents();
+        this.userProcessContainer=userProcessContainer;
+        this.enterprise=enterprise;
+    }
 
 /**
  *
@@ -26,19 +52,77 @@ public class ManageGovernmentOrganizationJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        manageOrganisationButton = new javax.swing.JButton();
+        manageAdminsButton = new javax.swing.JButton();
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Manage Government Organisations");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 19, -1, -1));
+
+        manageOrganisationButton.setText("Manage Organisations");
+        manageOrganisationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageOrganisationButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(manageOrganisationButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 109, 223, -1));
+
+        manageAdminsButton.setText("Manage Admins of Organisations");
+        manageAdminsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageAdminsButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(manageAdminsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 150, 223, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void manageOrganisationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganisationButtonActionPerformed
+        // TODO add your handling code here:
+        Interface.Electricity.CreateGovernmentOrgJPanel imcmojp = new Interface.Electricity.CreateGovernmentOrgJPanel(userProcessContainer,enterprise);
+        userProcessContainer.add("CreateGovernmentOrgJPanel",imcmojp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageOrganisationButtonActionPerformed
+
+    private void manageAdminsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAdminsButtonActionPerformed
+        // TODO add your handling code here:
+        Interface.Electricity.CreateGovernmentOrganisationAdminJPanel imcmoajp = new Interface.Electricity.CreateGovernmentOrganisationAdminJPanel(userProcessContainer,enterprise);
+        userProcessContainer.add("CreateGovernmentOrganisationAdminJPanel",imcmoajp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageAdminsButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton manageAdminsButton;
+    private javax.swing.JButton manageOrganisationButton;
     // End of variables declaration//GEN-END:variables
 }
