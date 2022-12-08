@@ -305,18 +305,7 @@ public class EventManagementRequestJPanel extends javax.swing.JPanel {
     }                                               
 
 
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton AssignBtn;
-    private javax.swing.JComboBox<Object> AvailablePersonComboBox;
-    private javax.swing.JButton backBtn;
-    private javax.swing.JButton cancelOrderJBtn;
-    private javax.swing.JButton completeReqJBtn;
-    private javax.swing.JTable eventMgmtReqJTable;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane2;
-    // End of variables declaration                   
+                 
 }
  */
 public class EventManagementRequestJPanel extends javax.swing.JPanel {
