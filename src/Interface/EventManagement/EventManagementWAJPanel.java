@@ -26,19 +26,86 @@ public class EventManagementWAJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        manageReqJBtn = new javax.swing.JButton();
+        manageAccountsJPanel = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        nameTxtField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        manageReqJBtn.setText("Manage Event Management Requests");
+        manageReqJBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageReqJBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(manageReqJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 74, 372, -1));
+
+        manageAccountsJPanel.setText("Manage Accounts");
+        manageAccountsJPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageAccountsJPanelActionPerformed(evt);
+            }
+        });
+        jPanel1.add(manageAccountsJPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 372, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Event Management Work Area");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 0, 297, -1));
+        jPanel1.add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 15, 106, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("Welcome !");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1005, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1005, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 538, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void manageReqJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageReqJBtnActionPerformed
+        // TODO add your handling code here:
+
+        EventManagementRequestJPanel isusajp = new EventManagementRequestJPanel(userProcessContainer,account, organization, enterprise,business);
+        userProcessContainer.add("EventManagementRequestJPanel",isusajp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageReqJBtnActionPerformed
+
+    private void manageAccountsJPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAccountsJPanelActionPerformed
+        // TODO add your handling code here:
+        EventManagementAccountsJPanel isusajp = new EventManagementAccountsJPanel(userProcessContainer,account, organization, enterprise,business);
+        userProcessContainer.add("EventManagementAccountsJPanel",isusajp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageAccountsJPanelActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton manageAccountsJPanel;
+    private javax.swing.JButton manageReqJBtn;
+    private javax.swing.JTextField nameTxtField;
     // End of variables declaration//GEN-END:variables
 }
