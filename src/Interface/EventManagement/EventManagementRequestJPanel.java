@@ -299,9 +299,7 @@ public class EventManagementRequestJPanel extends javax.swing.JPanel {
 
         wr.getCust().getNotification().addNotification(wr);
 
-        JOptionPane.showMessageDialog(null, "The request has been successfully cancelled", "Information", JOptionPane.INFORMATION_MESSAGE);
-
-        populateTable();
+        
     }                                               
 
 
@@ -482,10 +480,7 @@ public class EventManagementRequestJPanel extends javax.swing.JPanel {
             return;
         } else {
 
-            emp.getWorkQueue().getReqList().add(wr);
-            System.out.println(emp.getEmpUserAcc().getUserName());
-            if(wr.getReceiver()!=null){
-                wr.getReceiver().getWorkQueue().getReqList().remove(wr);
+            ;
             }
             wr.setReceiver(emp.getEmpUserAcc());
             wr.setSender(account);
