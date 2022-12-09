@@ -4,6 +4,19 @@
  */
 package Interface.EventManagement;
 
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Organisation.Organisation;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
+/**
+ *
+ * @author ankit
+ */
+public class EventManagementWAJPanel extends javax.swing.JPanel {
+
 /**
  *
  * @author mansi
