@@ -26,19 +26,86 @@ public class GovernmentEnterpriseWEJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        manageorganisations = new javax.swing.JButton();
+        ManageAdmins = new javax.swing.JButton();
+        nameTxtField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Manage Government Organisations");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 11, -1, -1));
+
+        manageorganisations.setText("Manage Organisations");
+        manageorganisations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageorganisationsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(manageorganisations, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, 265, -1));
+
+        ManageAdmins.setText("Manage Admins of Organisations");
+        ManageAdmins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ManageAdminsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ManageAdmins, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 124, 265, -1));
+        jPanel1.add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 15, 106, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("Welcome !");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 774, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 774, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 490, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void manageorganisationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageorganisationsActionPerformed
+        // TODO add your handling code here:
+        CreateGovernmentOrgJPanel igcsojp = new CreateGovernmentOrgJPanel(userProcessContainer, account, organization, enterprise, business);
+        userProcessContainer.add("CreateGovernmentOrgJPanel", igcsojp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageorganisationsActionPerformed
+
+    private void ManageAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManageAdminsActionPerformed
+        // TODO add your handling code here:
+        Interface.Garbage.CreateSocietyAdminWAJPanel igcsawjp = new Interface.Garbage.CreateSocietyAdminWAJPanel(userProcessContainer, account, organization, enterprise, business);
+        userProcessContainer.add("CreateSocietyAdminWAJPanel", igcsawjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_ManageAdminsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ManageAdmins;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton manageorganisations;
+    private javax.swing.JTextField nameTxtField;
     // End of variables declaration//GEN-END:variables
 }
