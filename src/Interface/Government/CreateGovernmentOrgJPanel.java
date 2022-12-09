@@ -3,6 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interface.Government;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Organisation.Organisation;
+import Business.Organisation.Organisation.GovernmentType;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
