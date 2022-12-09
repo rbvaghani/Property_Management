@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Interface.Government;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Organisation.Organisation;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
 
 /**
  *
