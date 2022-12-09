@@ -22,6 +22,25 @@ public class EventManagementWAJPanel extends javax.swing.JPanel {
  * @author mansi
  */
 public class EventManagementWAJPanel extends javax.swing.JPanel {
+    
+    
+    JPanel userProcessContainer;
+    UserAccount account;
+    Organisation organization;
+    Enterprise enterprise;
+    Ecosystem business;
+      public EventManagementWAJPanel(JPanel userProcessContainer, UserAccount account, Organisation organization, Enterprise enterprise, Ecosystem business) {
+        initComponents();
+         this.userProcessContainer=userProcessContainer;
+                this.account=account;
+                this.organization=organization;
+                this.enterprise=enterprise;
+                this.business=business;
+                        nameTxtField.setText(account.getEmployee().getName());
+
+    }
+
+}
 
     /**
      * Creates new form EventManagementWAJPanel
