@@ -26,19 +26,401 @@ public class ManageOrderJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        orderListJTbl = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
+        deliverJBtn = new javax.swing.JButton();
+        cancelOrderJBtn = new javax.swing.JButton();
+        SalestxtField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        MessageTxtField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        automatic_requests_txtfield = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        automaticJtable = new javax.swing.JTable();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+
+        orderListJTbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Customer Detail", "Status live", "Product", "Status", "Receiver", "Request Date"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(orderListJTbl);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Order Details");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("Manage Orders");
+
+        backBtn.setText("Back");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+
+        deliverJBtn.setText("Deliver Order");
+        deliverJBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deliverJBtnActionPerformed(evt);
+            }
+        });
+
+        cancelOrderJBtn.setText("Cancel Order");
+        cancelOrderJBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelOrderJBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Total Sales :");
+
+        jLabel1.setText("Message:");
+
+        jLabel5.setText("Automatic Requests Processed :");
+
+        automaticJtable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Customer", "Message", "Product", "Status", "Request Date", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(automaticJtable);
+
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel6.setText("Automatic Requests Details:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 962, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jLabel3))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jLabel2))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(backBtn)
+                            .addGap(9, 9, 9)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(deliverJBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(139, 139, 139)
+                                    .addComponent(automatic_requests_txtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel5))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(90, 90, 90)
+                            .addComponent(MessageTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(450, 450, 450)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(330, 330, 330)
+                            .addComponent(cancelOrderJBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(jLabel6))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(490, 490, 490)
+                            .addComponent(jLabel4))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(590, 590, 590)
+                            .addComponent(SalestxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 634, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addGap(12, 12, 12)
+                    .addComponent(jLabel2)
+                    .addGap(23, 23, 23)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(139, 139, 139)
+                            .addComponent(backBtn))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(139, 139, 139)
+                            .addComponent(deliverJBtn)
+                            .addGap(109, 109, 109)
+                            .addComponent(automatic_requests_txtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(280, 280, 280)
+                            .addComponent(jLabel5))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(180, 180, 180)
+                            .addComponent(MessageTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(40, 40, 40)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(200, 200, 200)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(140, 140, 140)
+                            .addComponent(cancelOrderJBtn))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(360, 360, 360)
+                            .addComponent(jLabel6))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(140, 140, 140)
+                            .addComponent(jLabel4))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(410, 410, 410)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(140, 140, 140)
+                            .addComponent(SalestxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_backBtnActionPerformed
+
+    private void deliverJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliverJBtnActionPerformed
+        // TODO add your handling code here:
+
+        int row = orderListJTbl.getSelectedRow();
+        if (row < 0) {
+            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        WorkRequest wr1 = (WorkRequest) orderListJTbl.getValueAt(row,3);
+
+        //Organisation org = null;
+        for (Organisation organization : enterprise.getOrganisationDirectory().getOrganizationlist()) {
+            if (organization instanceof DeliveryOrganisation) {
+                org = (DeliveryOrganisation) organization;
+                break;
+            }
+        }
+
+        if(wr1.getStatus().equals("Delivered")){
+            JOptionPane.showMessageDialog(null, "This request has already been closed", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if(wr1.getStatus().equals("Automatic sent to Delivery")){
+            JOptionPane.showMessageDialog(null, "This request has already been processed", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (org != null) {
+            org.getWorkQueue().getReqList().add(wr1);
+            wr1.setStatus("Pending at delivery");
+            account.getWorkQueue().getReqList().add(wr1);
+            wr1.getCust().getNotification().addNotification(wr1);
+        }
+
+        Customer c1 = (Customer) orderListJTbl.getValueAt(row, 0);
+        for (Product p1 : c1.getProdList()) {
+            if (p1 != null) {
+                //if (p1.getName().equals(prod.getName())) {
+                    if (p1 ==wr1.getProduct()) {
+                        if (p1.getOrder_status().equals("Pending at Grocery Market")) {
+                            p1.setOrder_status("Pending to be delivered");
+
+                            //String message = MessageTxtField.getText();
+
+                            //                        DeliverWorkRequest request = new DeliverWorkRequest();
+                            //                        request.setMessage(message);
+                            //                        request.setSender(account);
+                            //                        request.setStatus("sent");
+                            //                        request.setProduct(p1);
+                            //                        request.setCust(c1);
+                            //                        Date date = new Date();
+                            //                        request.setRequestDate(date);
+                            //                        Organisation org = null;
+                            //                        for (Organisation organization : enterprise.getOrganisationDirectory().getOrganizationlist()) {
+                                //                            if (organization instanceof DeliveryOrganisation) {
+                                    //                                org = organization;
+                                    //                                break;
+                                    //                            }
+                                //                        }
+                            //
+                            //                        if (org != null) {
+                                //                            org.getWorkQueue().getReqList().add(request);
+                                //
+                                //                        }
+                            double amountTOAdd=0;
+                            amountTOAdd = Double.valueOf(wr1.getProduct().getPrice());
+                            groceryOrganisation.addMoney(amountTOAdd);//*0.9);
+                        groceryOrganisation.debitMoney(wr1,amountTOAdd*0.1);
+                        JOptionPane.showMessageDialog(null, "The money has been successfully added.", "Information", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Product added at delivery end", "Information", JOptionPane.INFORMATION_MESSAGE);
+
+                        for(GroceryProduct gp:groceryOrganisation.getGroceryProductDirectory())
+                        {
+                            if(p1.getName().equals(gp.getProdName()))
+                            {
+                                gp.setAvail(gp.getAvail()-p1.getProductQuant());
+                            }
+                        }
+
+                        populate_table();
+                    } else if (p1.getOrder_status().equals("Pending to be delivered")) {
+                        JOptionPane.showMessageDialog(null, "This is already at delivery end", "Warning", JOptionPane.WARNING_MESSAGE);
+                        return;
+                    } else if (p1.getOrder_status().equals("Cancelled")) {
+                        JOptionPane.showMessageDialog(null, "This product is cancelled.", "Warning", JOptionPane.WARNING_MESSAGE);
+                        return;
+                    }
+
+                }
+            }
+
+        }
+
+    }//GEN-LAST:event_deliverJBtnActionPerformed
+
+    private void cancelOrderJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelOrderJBtnActionPerformed
+        // TODO add your handling code here:
+
+        int row = orderListJTbl.getSelectedRow();
+        if (row < 0) {
+            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        WorkRequest wr1 = (WorkRequest) orderListJTbl.getValueAt(row,3);
+
+        //Organisation org = null;
+        for (Organisation organization : enterprise.getOrganisationDirectory().getOrganizationlist()) {
+            if (organization instanceof DeliveryOrganisation) {
+                org = (DeliveryOrganisation) organization;
+                break;
+            }
+        }
+
+        if(wr1.getStatus().equals("Cancelled")){
+            JOptionPane.showMessageDialog(null, "This request has already been cancelled", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (org != null) {
+            org.getWorkQueue().getReqList().add(wr1);
+            wr1.setStatus("Cancelled");
+            account.getWorkQueue().getReqList().add(wr1);
+            wr1.getCust().getNotification().addNotification(wr1);
+        }
+
+        Customer c1 = (Customer) orderListJTbl.getValueAt(row, 0);
+        for (Product p1 : c1.getProdList()) {
+            if (p1 != null) {
+                //if (p1.getName().equals(prod.getName())) {
+                    if (p1 ==wr1.getProduct()) {
+                        if (p1.getOrder_status().equals("Pending at Grocery Market")) {
+                            p1.setOrder_status("Cancelled");
+                            double amountTOdel=0;
+                            amountTOdel = Double.valueOf(wr1.getProduct().getPrice());
+                            wr1.getCust().addMoney(amountTOdel);
+
+                            //String message = MessageTxtField.getText();
+
+                            //                        DeliverWorkRequest request = new DeliverWorkRequest();
+                            //                        request.setMessage(message);
+                            //                        request.setSender(account);
+                            //                        request.setStatus("sent");
+                            //                        request.setProduct(p1);
+                            //                        request.setCust(c1);
+                            //                        Date date = new Date();
+                            //                        request.setRequestDate(date);
+                            //                        Organisation org = null;
+                            //                        for (Organisation organization : enterprise.getOrganisationDirectory().getOrganizationlist()) {
+                                //                            if (organization instanceof DeliveryOrganisation) {
+                                    //                                org = organization;
+                                    //                                break;
+                                    //                            }
+                                //                        }
+                            //
+                            //                        if (org != null) {
+                                //                            org.getWorkQueue().getReqList().add(request);
+                                //
+                                //                        }
+                            JOptionPane.showMessageDialog(null, "Product cancelled", "Information", JOptionPane.INFORMATION_MESSAGE);
+                            populate_table();
+                        } else if (p1.getOrder_status().equals("Cancelled")) {
+                            JOptionPane.showMessageDialog(null, "This product is cancelled.", "Warning", JOptionPane.WARNING_MESSAGE);
+                            return;
+                        }
+
+                    }
+                }
+
+            }
+    }//GEN-LAST:event_cancelOrderJBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField MessageTxtField;
+    private javax.swing.JTextField SalestxtField;
+    private javax.swing.JTable automaticJtable;
+    private javax.swing.JTextField automatic_requests_txtfield;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JButton cancelOrderJBtn;
+    private javax.swing.JButton deliverJBtn;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable orderListJTbl;
     // End of variables declaration//GEN-END:variables
 }

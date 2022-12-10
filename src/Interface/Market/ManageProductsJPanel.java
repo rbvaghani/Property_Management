@@ -26,19 +26,125 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        productCatalogTbl = new javax.swing.JTable();
+        delButton5 = new javax.swing.JButton();
+        createPButton = new javax.swing.JButton();
+        backButton4 = new javax.swing.JButton();
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Manage Product Catalog");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+
+        productCatalogTbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        productCatalogTbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Product Name", "Product ID", "Price", "Available Units", "Image"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(productCatalogTbl);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 47, 761, 400));
+
+        delButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        delButton5.setText("Delete Product");
+        delButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(delButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 144, -1));
+
+        createPButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        createPButton.setText("Create New Product");
+        createPButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createPButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(createPButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 184, -1));
+
+        backButton4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        backButton4.setText("<< Back");
+        backButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 144, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 894, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 894, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 570, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void delButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delButton5ActionPerformed
+        // TODO add your handling code here:
+        int row = productCatalogTbl.getSelectedRow();
+        if(row<0) {
+            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        GroceryProduct gp = (GroceryProduct)productCatalogTbl.getValueAt(row, 0);
+        organisation.removeProd(gp);
+        populate_table();
+    }//GEN-LAST:event_delButton5ActionPerformed
+
+    private void createPButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPButtonActionPerformed
+        Interface.Market.CreateProductJPanel imcpjp = new Interface.Market.CreateProductJPanel(userProcessContainer, organisation);
+        userProcessContainer.add("Interface.Supplier.CreateProductsJPanel",imcpjp);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_createPButtonActionPerformed
+
+    private void backButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButton4ActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_backButton4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backButton4;
+    private javax.swing.JButton createPButton;
+    private javax.swing.JButton delButton5;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable productCatalogTbl;
     // End of variables declaration//GEN-END:variables
 }
